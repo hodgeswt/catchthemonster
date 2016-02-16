@@ -175,6 +175,9 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 var then = Date.now();
 hero.x = 256;
 hero.y = 240;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    alert("This game only works on desktop.");
+}
 var start = function() {
 	var element = document.getElementById("beginButton");
 	element.parentElement.removeChild(element);
