@@ -186,6 +186,3 @@ var start = function() {
 	window.setInterval(incrementTime, 1000);
 	main();
 };
-
-//reset();
-//main();
