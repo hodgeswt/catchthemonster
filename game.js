@@ -4,6 +4,7 @@ canvas.id = "canvas";
 var ctx = canvas.getContext("2d");
 canvas.width = 512;
 canvas.height = 480;
+canvas.addEventListener("touchstart", doTouchStart, false);
 document.body.appendChild(canvas);
 
 // Background
@@ -182,6 +183,13 @@ var start = function() {
 	window.setInterval(incrementTotalTime, 1000);
 	window.setInterval(incrementTime, 1000);
 	main();
+};
+
+var doTouchStart = function(event) {
+	event.preventDefault();
+	canvas_x = event.targetTouches[0].pageX;
+	canvas_y = event.targetTouches[0].pageY;
+	alert("x:"+canvas_x+"y":canvas_y);
 };
 
 //reset();
